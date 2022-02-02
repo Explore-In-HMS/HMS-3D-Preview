@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottom_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.hms.referenceapp.threedviewer.activity.CamModeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_56">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:paddingRight="@dimen/dimens_8"
+            android:src="@drawable/go_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimens_16"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_normal_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_8"
+                android:layout_marginRight="@dimen/dimens_16"
+                android:background="@drawable/select_mode_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/dimens_16">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/normal_mode_top_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_16"
+                    android:text="@string/ordinary_shooting_text"
+                    android:textColor="#FF2A3046"
+                    android:textSize="@dimen/dimens_18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dimens_12"
+                    android:layout_weight="1"
+                    android:text="@string/need_to_be_taken_text"
+                    android:textColor="@color/scan_tips_color"
+                    android:textSize="@dimen/dimens_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_round_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_16"
+                android:layout_marginTop="@dimen/dimens_16"
+                android:layout_marginRight="@dimen/dimens_16"
+                android:background="@drawable/select_mode_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/dimens_16">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/turntable_mode_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_16"
+                    android:text="@string/turntable_shooting_text"
+                    android:textColor="#FF2A3046"
+                    android:textSize="@dimen/dimens_18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_12"
+                    android:text="@string/shooting_is_supported_text"
+                    android:textColor="@color/scan_tips_color"
+                    android:textSize="@dimen/dimens_14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dimens_2"
+                    android:layout_weight="1"
+                    android:text="@string/object_shoes_text"
+                    android:textColor="@color/scan_tips_color"
+                    android:textSize="@dimen/dimens_14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+rootProject.name = "3D Viewer Demo"
+include ':app'
+include ':modelingResource'
+include ':cameratakelib'
+include ':engine'

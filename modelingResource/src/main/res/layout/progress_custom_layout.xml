@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scan_bottom_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimens_24"
+    android:paddingRight="@dimen/dimens_24">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimens_104"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_no_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_56"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/downloading_dialog_text"
+                android:textColor="@color/black_dialog_title_color"
+                android:textSize="@dimen/dimens_14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/quxiao_icon" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                style="@style/MyProgressBar"
+                android:layout_width="@dimen/dimens_24"
+                android:layout_height="@dimen/dimens_24"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimens_24"
+                android:layout_toLeftOf="@+id/iv_cancel" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_has_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_56"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_cancel_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/quxiao_icon"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimens_24"
+                android:layout_toLeftOf="@+id/iv_cancel_two">
+
+                <TextView
+                    android:id="@+id/tv_title_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uploading_dialog_text"
+                    android:textColor="@color/black_dialog_title_color"
+                    android:textSize="@dimen/dimens_14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@color/gray_dialog_color"
+                    android:textSize="@dimen/dimens_14sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_progress"
+                    style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:max="100"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/progressbar" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>
